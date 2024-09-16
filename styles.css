@@ -33,7 +33,7 @@ h1 {
 main {
     margin: 20px auto;
     padding: 20px;
-    max-width: 100%;
+    max-width: 1200px;
     display: flex;
     justify-content: center;
 }
@@ -42,11 +42,6 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);  /* Sempre duas colunas */
     grid-template-rows: repeat(2, auto);    /* Sempre duas linhas */
-    grid-gap: 20px;
-    max-width: 1200px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
     max-width: 1200px;
     width: 100%;
@@ -90,33 +85,9 @@ main {
 @media screen and (max-width: 768px) {
     .gallery {
         grid-template-columns: 1fr;  /* Uma coluna para telas menores */
-    h1 {
-        font-size: 2rem;
     }
 
     .image-container p {
         font-size: 1.2rem;
-    }
-
-    .gallery {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-
-    .image-container p {
-        font-size: 1.2rem;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .gallery {
-        grid-template-columns: 1fr;
-    }
-
-    .image-container p {
-        font-size: 1rem;
     }
 }
