@@ -43,7 +43,7 @@ main {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* Duas colunas */
+    grid-template-columns: repeat(3, 1fr);  /* Duas colunas */
     grid-template-rows: repeat(auto-fit, auto); /* Linhas automáticas */
     grid-gap: 20px;
     width: 100%;
