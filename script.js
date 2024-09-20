@@ -50,3 +50,11 @@ document.addEventListener('DOMContentLoaded', function () {
         loadExternalFile('extra_script.js', 'js');
     });
 });
+
+document.querySelectorAll('.image-container').forEach(item => {
+    item.addEventListener('click', () => {
+        const url = item.getAttribute('data-url');
+        window.open(url, '_blank');  // Abre o link em uma nova aba
+    });
+});
+
