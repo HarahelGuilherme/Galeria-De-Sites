@@ -10,8 +10,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
+    overflow-y: auto;
 }
 
 header {
@@ -33,17 +34,18 @@ h1 {
 main {
     margin: 20px auto;
     padding: 20px;
-    max-width: 1200px;
+    max-width: 80%; /* Definido para ocupar 80% da largura */
+    height: 80vh; /* Altura máxima para ajustar a rolagem */
+    overflow-y: scroll; /* Rolagem vertical */
     display: flex;
     justify-content: center;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);  /* Sempre duas colunas */
-    grid-template-rows: repeat(2, auto);    /* Sempre duas linhas */
+    grid-template-columns: repeat(2, 1fr);  /* Duas colunas */
+    grid-template-rows: repeat(auto-fit, auto); /* Linhas automáticas */
     grid-gap: 20px;
-    max-width: 1200px;
     width: 100%;
 }
 
@@ -54,6 +56,7 @@ main {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .image-container:hover {
@@ -84,7 +87,7 @@ main {
 /* Responsividade */
 @media screen and (max-width: 768px) {
     .gallery {
-        grid-template-columns: 1fr;  /* Uma coluna para telas menores */
+        grid-template-columns: 1fr;  /* Uma coluna em telas menores */
     }
 
     .image-container p {
